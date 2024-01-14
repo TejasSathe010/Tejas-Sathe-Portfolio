@@ -10,6 +10,7 @@ import projectFive from "./images/projects/projectFive.png";
 import projectSix from "./images/projects/projectSix.png";
 import testimonialOne from "./images/testmonial/testimonialOne.png";
 import testimonialTwo from "./images/testmonial/testimonialTwo.png";
+import centiro from "./images/testmonial/centiro.png";
 import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
 
@@ -26,6 +27,7 @@ export {
   projectSix,
   testimonialOne,
   testimonialTwo,
+  centiro,
   quote,
   contactImg,
 };

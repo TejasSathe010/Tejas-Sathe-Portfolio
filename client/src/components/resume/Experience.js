@@ -15,49 +15,39 @@ const Experience = () => {
           <h2 className="text-4xl font-bold">Job Experience</h2>
         </div>
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-          <ResumeCard
-            title="Sr. Software Engineer"
-            subTitle="Google Out Tech - (2017 - Present)"
-            result="USA"
-            des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+        <ResumeCard
+            title="Frontend Developer"
+            subTitle="Centiro Solutions - (2022 - 2023)"
+            result="India"
+            des="• Developed and enhanced an organization-level, multi-page website, empowering multiple clients to automate
+            their labour-intensive workflows, resulting in a 40% reduction in manual errors and a 30% increase in overall
+            productivity.
+            • Architected and wrote multiple reusable Angular (TypeScript) components as per the Figma design with different
+            design systems and architectural patterns. Reduced page load time by 50% with the help of SEO techniques.
+            • Programmed, integrated, and maintained multiple endpoints in the ASP .Net framework. Contributed to developing
+            detailed test plans and product evaluation tools as a member of the R&D group.
+            • Identified and resolved over 12+ bugs."
           />
           <ResumeCard
-            title="Web Developer & Trainer"
-            subTitle="Apple Developer Team - (2012 - 2016)"
-            result="MALAYSIA"
-            des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+            title="Python Developer"
+            subTitle="Cognizant - (2020 - 2022)"
+            result="India"
+            des="• Engineered, implemented, tested, and documented Python automation scripts for comprehensive monitoring of
+            Hadoop infrastructure.
+            • Reducing manual monitoring efforts by 60% and ensuring bug-free code integrity.
+            • Worked with low-level LINUX commands to connect with servers and databases. Integrated MoogSoft Api in
+            Python automation scripts for alerting and raising the ticket.
+            • Active participation in the continuous improvement of automation strategy. Upgraded scripts with error handling,
+            reducing downtime by 40%."
           />
           <ResumeCard
-            title="Front-end Developer"
-            subTitle="Nike - (2020 - 2011)"
-            result="Oman"
-            des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
-          />
-        </div>
-      </div>
-      <div>
-        <div className="flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2001 - 2020</p>
-          <h2 className="text-4xl font-bold">Trainer Experience</h2>
-        </div>
-        <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
-          <ResumeCard
-            title="Gym Instructor"
-            subTitle="Rainbow Gym Center (2015 - 2020)"
-            result="DHAKA"
-            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
-          />
-          <ResumeCard
-            title="Web Developer and Instructor"
-            subTitle="SuperKing College (2010 - 2014)"
-            result="CANADA"
-            des="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
-          />
-          <ResumeCard
-            title="School Teacher"
-            subTitle="Kingstar Secondary School (2001 - 2010)"
-            result="NEVADA"
-            des="Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
+            title="Android Developer (Internship)"
+            subTitle="WERP - (2019)"
+            result="Remote"
+            des="• Contributed to the entire product development lifecycle, including planning, design, prototyping, testing, and
+            iterating, of an Android application developed for women to buy and sell goods online.
+            • Used Adobe XD for designing and developing user interactive prototypes. Integrated 3rd party APIs, enhancing
+            application functionality."
           />
         </div>
       </div>
