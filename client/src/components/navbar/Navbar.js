@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {logo} from "../../assets/index"
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import {profileLogo} from "../../assets/index"
 import { navLinksdata } from '../../constants';
 
@@ -47,7 +46,7 @@ const Navbar = () => {
           <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-slate-50 p-4 scrollbar-hide">
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
-                <img className="w-32" src={logo} alt="logo" />
+                <img src={profileLogo} width={40} height={40} alt="logo" />
                 <p className="text-sm text-gray-800 mt-2">
                   
                 </p>

@@ -26,7 +26,7 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-        Versatile and passionate about embracing a multitude of skill sets in the tech realm, a relentless learner and a dynamic professional with a knack for seamlessly navigating diverse domains. From crafting robust front-end experiences with <span className="text-designColor">Angular and React</span> to diving deep into Python automation scripts for infrastructure monitoring, I've explored the breadth of programming languages, frameworks, and tools. My journey spans from building an intuitive Movie Recommendation System to spearheading Android app development for a seamless user experience. Eager to tackle challenges and constantly evolve within the tech landscape, I thrive on the thrill of learning and applying various skill sets to drive innovation.
+        Versatile and passionate about embracing a multitude of skill sets in the tech realm, a relentless learner and a dynamic professional with a knack for seamlessly navigating diverse domains. 
         </p>
       </div>
      {/* Media */}
