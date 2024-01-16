@@ -17,7 +17,7 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-gray-800">
           Hi, I'm <span className="text-designColor capitalize">Tejas Sathe</span>
         </h1>
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="text-4xl font-bold text-gray-800 text-base md:text-4xl">
           a <span className='text-gray-800'>{text}</span>
           <Cursor
             cursorBlinking="false"
@@ -26,7 +26,7 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-        Versatile and passionate about embracing a multitude of skill sets in the tech realm, a relentless learner and a dynamic professional with a knack for seamlessly navigating diverse domains. 
+          Versatile and passionate about embracing a multitude of skill sets in the tech realm, a relentless learner and a dynamic professional with a knack for seamlessly navigating diverse domains. 
         </p>
       </div>
      {/* Media */}

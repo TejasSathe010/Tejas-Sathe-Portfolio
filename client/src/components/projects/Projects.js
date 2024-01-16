@@ -27,7 +27,7 @@ const Projects = () => {
       <div className="flex justify-start items-center">
         <Title title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK" des="My Projects" />
         <a
-          href="https://www.linkedin.com/in/tejas-sathe010/details/recommendations/"
+          href="https://github.com/TejasSathe010/Tejas-Sathe-Portfolio"
           className="text-designColor flex justify-evenly items-center"
         >
           <AiFillGithub />

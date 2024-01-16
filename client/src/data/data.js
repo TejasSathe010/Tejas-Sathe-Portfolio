@@ -17,42 +17,42 @@ export const featuresData = [
   {
     id: 1,
     title: "JavaScript Frameworks",
-    des: "Knowledge of popular JavaScript frameworks like React, Angular and Express.js",
+    des: "Proficient in widely-used JavaScript frameworks such as React.JS, Angular, and Express.JS.",
     link: "https://github.com/TejasSathe010/IT-Employees-System"
   },
   {
     id: 2,
     icon: <AiFillAppstore />,
     title: "CSS Frameworks",
-    des: "Familiarity with CSS frameworks like Bootstrap, Tailwind CSS",
+    des: "Acquainted with CSS frameworks such as Bootstrap and Tailwind CSS.",
     link: "https://github.com/TejasSathe010/Responsive-Nike-Website-Clone"
   },
   {
     id: 3,
     icon: <SiProgress />,
     title: "SEO Optimisation",
-    des: "The process of enhancing a website's visibility in search engine results pages (SERPs)",
+    des: "Familiar with the process of enhancing a website's visibility in search engine results pages (SERPs).",
     link: "#"
   },
   {
     id: 4,
     icon: <FaMobile />,
     title: "Responsive Design",
-    des: "Designs that work well on various devices and screen sizes using media queries and flexible layouts",
+    des: "Skilled in crafting designs that seamlessly adapt to different devices and screen sizes through the use of media queries and flexible layouts.",
     link: "https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone"
   },
   {
     id: 5,
     icon: <SiAntdesign />,
     title: "UX Design",
-    des: "Basic understanding of graphic design principles which is beneficial for creating visually appealing UIs",
+    des: "Foundational grasp of graphic design principles, enhancing the ability to create visually appealing user interfaces.",
     link: "#"
   },
   {
     id: 6,
     icon: <FaGlobe />,
     title: "Version Control/Git",
-    des: "Know version control systems like Git to collaborate with other developers and track changes",
+    des: "Adept in utilizing version control systems like Git for collaborative development and tracking changes.",
     link: "https://github.com/TejasSathe010"
   },
 ];
@@ -84,7 +84,7 @@ export const projectData = [
   },
   {
     title: 'Color Fusion',
-    description: 'A site where we can discover, create, choose color for web development',
+    description: 'A site where we can discover, create, choose color for web development.',
     src: projectFive,
     gitLink: 'https://github.com/TejasSathe010/Color-Fusion'
   },
