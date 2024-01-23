@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
 
@@ -16,7 +16,7 @@ const ContactLeft = () => {
           Full Stack Developer
         </p>
         <p className="text-base text-gray-800 tracking-wide">
-          Current graduate student at the University of South Florida, Tampa.
+          Graduate student at the University of South Florida, Tampa.
         </p>
         <p className="text-base text-gray-800 flex items-center gap-2">
           Phone: <span className="text-gray-600">+1 (786) 561-4652</span>
@@ -44,4 +44,4 @@ const ContactLeft = () => {
   );
 }
 
-export default ContactLeft
+export default ContactLeft;

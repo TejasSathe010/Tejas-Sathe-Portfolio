@@ -18,11 +18,11 @@ const ResumeCard = ({ title, subTitle, result, keySkills, description }) => {
               {subTitle}
             </p>
           </div>
-          <div>
+          {/* <div>
             <p className="px-4 text-designColor bg-slate-400 bg-opacity-25 rounded-lg flex justify-center items-center shadow-2xl text-sm font-medium">
               {result}
             </p>
-          </div>
+          </div> */}
         </div>
         <p className="text-sm md:text-base italic font-medium text-gray-400 group-hover:text-designColor duration-300">
           {keySkills && keySkills}
