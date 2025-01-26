@@ -1,27 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {profileLogo} from "../../assets/index"
-import { navLinksdata } from '../../constants';
+import { profileLogo } from "../../assets/index";
+import { navLinksdata } from "../../constants";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu]=useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
-    <div className="w-full h-24 sticky top-0 z-50 bg-slate-50 mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
-      <div className='pl-2'>
+    <div className="w-full h-20 sticky top-0 z-50 bg-white shadow-md border-b border-gray-200 flex justify-between items-center px-6 lg:px-16 font-sans backdrop-blur-lg">
+      {/* Logo */}
+      <div>
         <a href="#">
-          <img src={profileLogo} alt="logo" width={40} height={40} className='rounded-lg' />
-          
+          <img
+            src={profileLogo}
+            alt="logo"
+            width={48}
+            height={48}
+            className="rounded-full shadow-sm hover:shadow-md hover:scale-105 transition-transform duration-300 border border-gray-300"
+          />
         </a>
       </div>
-      <div>
-        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center gap-8">
+        <ul className="flex items-center gap-6">
           {navLinksdata.map(({ _id, title, link }) => (
             <li
-              className="text-base font-normal text-gray-800 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
+              className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer"
             >
               <Link
                 activeClass="active"
@@ -36,69 +45,107 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <span
-          onClick={() => setShowMenu(!showMenu)}
-          className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
-        >
-          <FiMenu />
-        </span>
-        {showMenu && (
-          <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-slate-50 p-4 scrollbar-hide">
-            <div className="flex flex-col gap-8 py-2 relative">
-              <div>
-                <img src={profileLogo} width={40} height={40} alt="logo" />
-                <p className="text-sm text-gray-800 mt-2">
-                  
-                </p>
-              </div>
-              <ul className="flex flex-col gap-4">
-                {navLinksdata.map((item) => (
-                  <li
-                    key={item._id}
-                    className="text-base font-normal text-gray-800 tracking-wide cursor-pointer hover:text-designColor duration-300"
+
+        {/* Social Links */}
+        <div className="flex items-center gap-4 ml-8">
+          <a
+            href="#"
+            className="text-xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="#"
+            className="text-xl text-gray-600 hover:text-blue-400 transition-transform duration-300"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="#"
+            className="text-xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
+          >
+            <FaLinkedinIn />
+          </a>
+        </div>
+      </div>
+
+      {/* Mobile Menu Icon */}
+      <span
+        onClick={() => setShowMenu(!showMenu)}
+        className="text-2xl md:hidden text-gray-600 hover:text-indigo-500 transition-colors duration-300 cursor-pointer"
+      >
+        {showMenu ? <MdClose /> : <FiMenu />}
+      </span>
+
+      {/* Mobile Menu */}
+      {showMenu && (
+        <div className="fixed top-0 left-0 w-[75%] h-screen bg-white shadow-lg border-r border-gray-200 p-6 z-50">
+          <div className="flex flex-col gap-8">
+            {/* Logo */}
+            <div className="flex items-center gap-4">
+              <img
+                src={profileLogo}
+                alt="logo"
+                width={48}
+                height={48}
+                className="rounded-full shadow-sm border border-gray-300"
+              />
+              <p className="text-lg font-semibold text-gray-800">My Portfolio</p>
+            </div>
+
+            {/* Links */}
+            <ul className="flex flex-col gap-6">
+              {navLinksdata.map(({ _id, title, link }) => (
+                <li
+                  key={_id}
+                  className="text-base font-medium text-gray-700 hover:text-indigo-500 hover:translate-x-2 transition-all duration-300 cursor-pointer"
+                >
+                  <Link
+                    onClick={() => setShowMenu(false)}
+                    activeClass="active"
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
                   >
-                    <Link
-                      onClick={() => setShowMenu(false)}
-                      activeClass="active"
-                      to={item.link}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex flex-col gap-4">
-                <h2 className="text-base uppercase font-titleFont mb-4">
-                  Find me in
-                </h2>
-                <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <FaGithub />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaLinkedinIn />
-                  </span>
-                </div>
+                    {title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Social Links */}
+            <div className="mt-8">
+              <h2 className="text-sm font-semibold text-gray-500 mb-2">
+                Connect with me:
+              </h2>
+              <div className="flex gap-6">
+                <a
+                  href="#"
+                  className="text-2xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="#"
+                  className="text-2xl text-gray-600 hover:text-blue-400 transition-transform duration-300"
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="#"
+                  className="text-2xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
+                >
+                  <FaLinkedinIn />
+                </a>
               </div>
-              <span
-                onClick={() => setShowMenu(false)}
-                className="absolute top-4 right-4 text-gray-800 hover:text-designColor duration-300 text-2xl cursor-pointer"
-              >
-                <MdClose />
-              </span>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

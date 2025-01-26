@@ -1,7 +1,8 @@
-import { AiFillAppstore } from "react-icons/ai";
-import { FaMobile, FaGlobe} from "react-icons/fa";
-import { SiProgress, SiAntdesign } from "react-icons/si";
+import { FaLaptopCode, FaServer, FaCloud, FaDatabase, FaGit, FaPlug, FaPaintBrush } from 'react-icons/fa';
+import { SiTensorflow } from 'react-icons/si';
 import {
+  TechLitHubProject,
+  OrganizeIt,
   projectOne,
   projectTwo,
   projectThree,
@@ -16,93 +17,123 @@ import {
 export const featuresData = [
   {
     id: 1,
-    title: "JavaScript Frameworks",
-    des: "Proficient in widely-used JavaScript frameworks such as React.JS, Angular, and Express.JS.",
-    link: "https://github.com/TejasSathe010/IT-Employees-System"
+    title: "Frontend Development",
+    des: "Proficient in modern frontend technologies including React.js, Angular, Next.js, and Tailwind CSS, with a focus on performance optimization and state management.",
+    link: "https://github.com/TejasSathe010/IT-Employees-System",
+    icon: <FaLaptopCode />
   },
   {
     id: 2,
-    icon: <AiFillAppstore />,
-    title: "CSS Frameworks",
-    des: "Acquainted with CSS frameworks such as Bootstrap and Tailwind CSS.",
-    link: "https://github.com/TejasSathe010/Responsive-Nike-Website-Clone"
+    title: "Backend Development",
+    des: "Experienced with building scalable backend services using Node.js, Express.js, ASP.Net, and microservices architectures for high-performance applications.",
+    link: "https://github.com/TejasSathe010/Responsive-Nike-Website-Clone",
+    icon: <FaServer />
   },
   {
     id: 3,
-    icon: <SiProgress />,
-    title: "SEO Optimisation",
-    des: "Familiar with the process of enhancing a website's visibility in search engine results pages (SERPs).",
-    link: "#"
+    title: "Cloud Platforms",
+    des: "Hands-on experience with AWS (EC2, Lambda, S3, ECS), Azure (App Services, Functions), and GCP (Cloud Run, BigQuery) for cloud-native application deployment and management.",
+    link: "#",
+    icon: <FaCloud />
   },
   {
     id: 4,
-    icon: <FaMobile />,
-    title: "Responsive Design",
-    des: "Skilled in crafting designs that seamlessly adapt to different devices and screen sizes through the use of media queries and flexible layouts.",
-    link: "https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone"
+    title: "Databases & Caching",
+    des: "Proficient in relational (MySQL, PostgreSQL) and NoSQL (MongoDB, Redis) databases, with expertise in designing optimized, scalable database architectures.",
+    link: "https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone",
+    icon: <FaDatabase />
   },
   {
     id: 5,
-    icon: <SiAntdesign />,
-    title: "UX Design",
-    des: "Foundational grasp of graphic design principles, enhancing the ability to create visually appealing user interfaces.",
-    link: "#"
+    title: "Version Control & CI/CD",
+    des: "Skilled in Git for version control, and proficient in building CI/CD pipelines using Docker, Kubernetes, and GitLab, ensuring smooth deployment workflows.",
+    link: "#",
+    icon: <FaGit />
   },
   {
     id: 6,
-    icon: <FaGlobe />,
-    title: "Version Control/Git",
-    des: "Adept in utilizing version control systems like Git for collaborative development and tracking changes.",
-    link: "https://github.com/TejasSathe010"
+    title: "Machine Learning & AI",
+    des: "Experienced in developing machine learning models using TensorFlow and Scikit-learn, including recommendation systems and deep learning architectures.",
+    link: "https://github.com/TejasSathe010",
+    icon: <SiTensorflow />
+  },
+  {
+    id: 7,
+    title: "API Development & Integration",
+    des: "Proficient in developing RESTful APIs, WebSockets, gRPC, and GraphQL services to enable efficient communication in distributed systems.",
+    link: "#",
+    icon: <FaPlug />
+  },
+  {
+    id: 8,
+    title: "UX/UI Design",
+    des: "Solid foundation in UX/UI design principles using tools like Figma, focusing on user-centered design and creating visually appealing, responsive interfaces.",
+    link: "#",
+    icon: <FaPaintBrush />
   },
 ];
 
 export const projectData = [
   {
-    title: 'A Starbucks UI clone',
-    description: 'The homepage features the iconic green and white color scheme of Starbucks using HTML, CSS and Javascript.',
-    src: projectOne,
-    gitLink: 'https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone'
+    title: 'TechLitHub.com',
+    description: 'A highly scalable blog platform utilizing microservices, developed with React, Node.js, MongoDB, AWS S3, Redis, Docker, and TensorFlow for content recommendation.',
+    src: TechLitHubProject,
+    gitLink: 'https://github.com/TejasSathe010/TechLitHub',
+    deployLink: 'https://techlithub.netlify.app/'
   },
   {
-    title: 'A Nike Site',
-    description: 'Nike website, involves replicating its design and structure homepage using React.JS and Tailwind.CSS',
+    title: 'Starbucks UI Clone',
+    description: 'A responsive homepage clone of Starbucks, built with HTML, CSS, and JavaScript, featuring an intuitive layout and interactive elements.',
+    src: projectOne,
+    gitLink: 'https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone',
+    deployLink: 'https://starbucks-ui-clone.netlify.app/'
+  },
+  {
+    title: 'Nike Website Clone',
+    description: 'A Nike website replica using React.js and Tailwind CSS, demonstrating responsive design principles and modern front-end practices.',
     src: projectTwo,
-    gitLink: 'https://github.com/TejasSathe010/Responsive-Nike-Website-Clone'
+    gitLink: 'https://github.com/TejasSathe010/Responsive-Nike-Website-Clone',
+    deployLink: 'https://nike-site-clone.netlify.app/'
+  },
+  {
+    title: 'OrganizeIt - Trello Clone',
+    description: 'A productivity tool inspired by Trello, built with React, Next.js, TypeScript, and Appwrite for cloud backend services, featuring drag-and-drop functionality and Zustand state management.',
+    src: OrganizeIt,
+    gitLink: 'https://github.com/TejasSathe010/OranizeIt',
   },
   {
     title: 'Employee Management System',
-    description: 'A comprehensive project featuring distinct profiles for both employees and administrators, developed with React.JS and Node.JS',
+    description: 'A full-stack application with distinct profiles for employees and administrators, implemented with React.js and Node.js for managing employee data and tasks.',
     src: projectThree,
     gitLink: 'https://github.com/TejasSathe010/IT-Employees-System'
   },
   {
     title: 'React Expense Tracker',
-    description: 'Simple expense tracker app project where we can include, and delete transaction.',
+    description: 'A simple expense tracker application built with React, enabling users to track, add, and remove transactions for personal financial management.',
     src: projectFour,
     gitLink: 'https://github.com/TejasSathe010/React-Expense-Tracker'
   },
   {
     title: 'Color Fusion',
-    description: 'A site where we can discover, create, choose color for web development.',
+    description: 'An interactive web application where users can discover, create, and choose colors, useful for web development and design.',
     src: projectFive,
     gitLink: 'https://github.com/TejasSathe010/Color-Fusion'
   },
   {
-    title: 'ML from scratch',
-    description: 'Different Machine Learning algorithms implemented from scratch.',
+    title: 'Machine Learning from Scratch',
+    description: 'A collection of machine learning algorithms implemented from the ground up in Python, showcasing core ML concepts and techniques.',
     src: projectSix,
     gitLink: 'https://github.com/TejasSathe010/ML_Scratch'
   },
   {
     title: 'Movie Recommendation System',
-    description: 'Researched and programmed a Recommendation System based on a Hybrid Approach (Content-based filtering and Collaborative-based filtering).',
+    description: 'A hybrid recommendation system that combines content-based filtering and collaborative filtering to suggest movies, built with Python and machine learning libraries.',
     src: projectSeven,
     gitLink: ''
   },
   {
-    title: 'Heart Pizza House Android Application ',
-    description: 'Designed and developed a pizza-ordering Android application with Firebase as a backend service.',
+    title: 'Heart Pizza House Android App',
+    description: 'An Android-based pizza ordering application designed with Firebase as the backend, allowing users to place orders and track their delivery status.',
     src: projectEight,
     gitLink: ''
   },
@@ -131,12 +162,11 @@ export const jobExperienceData = [
     title: 'Frontend Developer',
     subTitle: 'Centiro Solutions - (2022 - 2023)',
     result: 'India',
-    keySkills: 'Javascript | Angular (TypeScript) | ASP.Net Framework | CSS | Figma | Azure DevOps',
+    keySkills: 'Javascript | Angular (TypeScript) | Next.JS | ASP.Net Framework | CSS | Figma | Azure DevOps',
     description: [
-      "• Developed and enhanced an organization-level, multi-page website, empowering multiple clients to automate their labour-intensive workflows, resulting in a 40% reduction in manual errors and a 30% increase in overall productivity.",
-      "• Architected and wrote multiple reusable Angular (TypeScript) components as per the Figma design with different design systems and architectural patterns. Reduced page load time by 50% with the help of SEO techniques.",
-      "• Programmed, integrated, and maintained multiple endpoints in the ASP .Net framework. Contributed to developing detailed test plans and product evaluation tools as a member of the R&D group.",
-      "• Identified and resolved over 12+ bugs."
+      "•  Led the transformation of a multi-page website for 20+ enterprise clients using cutting-edge technologies including Angular (TypeScript), RxJS, and NgRx. Employed advanced SEO strategies to achieve a 50% reduction in page load times, enhancing user experience and engagement. Ensured seamless alignment with Figma designs and implemented scalable architectural patterns.",
+      "• Architected and optimized a suite of 10+ ASP .Net core endpoints with a remarkable 99.9% uptime and 25% improvement in response times. Implemented MySQL query optimization techniques to enhance database performance, resulting in faster data retrieval and processing. Leveraged React for the Application Management project, achieving streamlined development workflows, and deployed via Octopus for efficient CI/CD integration.",
+      "• Tech Stack: JS, TS, Angular, React, C#, ASP.Net Core, Microsoft SQL Server, Octopus, Microsoft Azure"
     ] 
   },
   {
@@ -146,10 +176,9 @@ export const jobExperienceData = [
     result: 'India',
     keySkills: 'Python | LINUX | UNIX | Moogsoft | Web API | Continues Improvement | Maintenance',
     description: [
-      "• Engineered, implemented, tested, and documented Python automation scripts for comprehensive monitoring of Hadoop infrastructure.",
-      "• Reducing manual monitoring efforts by 60% and ensuring bug-free code integrity.",
-      "• Worked with low-level LINUX commands to connect with servers and databases. Integrated MoogSoft Api in Python automation scripts for alerting and raising the ticket.",
-      "• Active participation in the continuous improvement of automation strategy. Upgraded scripts with error handling, reducing downtime by 40%."
+      "• Drove the development of sophisticated Python automation scripts tailored for comprehensive monitoring of Hadoop infrastructure, seamlessly integrating with critical services such as Hive, Spark, and PostgreSQL. Achieved a remarkable 60% reduction in manual efforts, optimizing operational efficiency and system reliability.",
+      "• Engineered enhancements with advanced error handling mechanisms, significantly reducing system downtime by 40% and ensuring uninterrupted operations at scale. Elevated system performance to industry-leading standards.",
+      "• Tech Stack: Python, LINUX, Git, Hadoop Clusters, Grafana, Moogsoft AIOps"
     ]
   },
   {
