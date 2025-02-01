@@ -1,6 +1,3 @@
-import logo from "./images/logo.png";
-import bannerImg from "./images/bannerImg.png";
-import profile from "./images/profile.png";
 import TechLitHubProject from "./images/projects/TechLitHubProject.png"
 import OrganizeIt from "./images/projects/OrganizeIt.png"
 import profileLogo from "./images/profile-logo.png";
@@ -19,10 +16,7 @@ import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
 
 export {
-  logo,
-  bannerImg,
   profileLogo,
-  profile,
   TechLitHubProject,
   OrganizeIt,
   projectOne,

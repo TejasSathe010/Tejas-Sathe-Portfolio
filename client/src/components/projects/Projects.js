@@ -45,7 +45,7 @@ const Projects = () => {
         <div className="flex justify-center mt-8">
           <a
             href="https://github.com/TejasSathe010/Tejas-Sathe-Portfolio"
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-md hover:bg-blue-700 transition-all"
+            className="flex items-center gap-2 bg-gradient-to-br from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-medium shadow-md hover:bg-blue-700 transition-all"
           >
             <AiFillGithub className="text-lg" />
             <span>View My GitHub ({reposCount} Repositories)</span>
@@ -55,9 +55,9 @@ const Projects = () => {
         <div className="flex justify-center mt-12 space-x-6">
           <button
             onClick={() => setActiveTab("showcase")}
-            className={`px-6 py-2 rounded-full text-sm font-medium ${
+            className={`px-6 py-2 rounded-lg text-sm font-medium ${
               activeTab === "showcase"
-                ? "bg-blue-600 text-white"
+                ? "bg-gradient-to-br from-indigo-500 to-purple-500 text-white"
                 : "bg-gray-200 text-gray-700"
             } transition-all duration-300 shadow-sm hover:shadow-md`}
           >
@@ -65,9 +65,9 @@ const Projects = () => {
           </button>
           <button
             onClick={() => setActiveTab("archive")}
-            className={`px-6 py-2 rounded-full text-sm font-medium ${
+            className={`px-6 py-2 rounded-lg text-sm font-medium ${
               activeTab === "archive"
-                ? "bg-blue-600 text-white"
+                ? "bg-gradient-to-br from-indigo-500 to-purple-500 text-white"
                 : "bg-gray-200 text-gray-700"
             } transition-all duration-300 shadow-sm hover:shadow-md`}
           >

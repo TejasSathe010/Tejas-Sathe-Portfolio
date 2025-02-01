@@ -158,8 +158,14 @@ export const educationData = [
 
 export const jobExperienceData = [
   {
+    period: '2024 - 2025',
+    title: 'Software Developer Intern',
+    subTitle: 'FirstFive8, Inc. - Jambonz - (2022 - 2023)',
+    keySkills: 'Javascript | React (TypeScript) | Next.JS | Node.js | Express Framework | CSS | ChakraUI | Docker | K8',
+  },
+  {
     period: '2020 - 2023',
-    title: 'Frontend Developer',
+    title: 'Full Stack Engineer',
     subTitle: 'Centiro Solutions - (2022 - 2023)',
     result: 'India',
     keySkills: 'Javascript | Angular (TypeScript) | Next.JS | ASP.Net Framework | CSS | Figma | Azure DevOps',
@@ -171,7 +177,7 @@ export const jobExperienceData = [
   },
   {
     period: '2020 - 2023',
-    title: 'Python Developer',
+    title: 'Software Developer',
     subTitle: 'Cognizant - (2020 - 2022)',
     result: 'India',
     keySkills: 'Python | LINUX | UNIX | Moogsoft | Web API | Continues Improvement | Maintenance',
@@ -196,6 +202,7 @@ export const jobExperienceData = [
 
 export const testimonials = [
   {
+    image: "https://media.licdn.com/dms/image/v2/D4D35AQG1FqN1R6niAg/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1654530876763?e=1738990800&v=beta&t=S9SDoVNmuuafiqLs2-TymAEEKzyqQKMJdB61zTIEnvE",
     name: "Bhavya Kethepalli",
     linkedin: "https://www.linkedin.com/in/bhavya-kethepalli-47b3b6208/",
     position: "Data Engineer at Cognizant",
@@ -203,6 +210,7 @@ export const testimonials = [
       "A very hardworking person who knows how to tackle the situation smartly. He is a highly skilled and a dedicated professional, has helped a lot in ETL issues and is also very good with front end. An all-rounder guy with whom it’s fun to work! I highly recommend him to anyone who is willing to work smartly with enthusiasm.",
   },
   {
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQEqcTEOm9A9dg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1662468642909?e=1743638400&v=beta&t=_zzP12T36QVmI8qWTJUIYt53nrrGvf8OF4P6syLZKks",
     name: "Anjali Dhobale",
     linkedin: "https://www.linkedin.com/in/anjali-dhobale-428039138/",
     position: "Frontend Developer at Centiro",
@@ -210,6 +218,7 @@ export const testimonials = [
       "We worked together at Centiro and I was Tejas' mentor. He is an excellent team player and works individually as well. He is always ready to help people personally and professionally. Tejas has all the skills needed in corporate life. He is the best colleague I have ever met. I would be more than happy to work with Tejas again. thanks 😊",
   },
   {
+    image: "https://media.licdn.com/dms/image/v2/C5603AQHbwI4L-sR6jQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659975371883?e=1743638400&v=beta&t=e5kJj0WucWPzyBORDPbEJdCh0dbVAoszXhr-47HqHvE",
     name: "Rujeet Lavekar",
     linkedin: "https://www.linkedin.com/in/rujeet-lavekar-ab2102173/",
     position: "Application Specialist at Centiro",
@@ -217,6 +226,7 @@ export const testimonials = [
       "I wanted to take a moment to acknowledge the incredible work that Tejas has done. His attention to detail and problem solving skills are truly impressive. I have had pleasure to work with him on a project for almost a year, and i am amazed by his technical expertise , his frontend skills and ability to implement complex designs with precision whenever in a complex situation TEJAS is go to person for creative and effective solutions.",
   },
   {
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQEji2PsHpfTyA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1663411818799?e=1743638400&v=beta&t=YuKFIeo3MlX8YFj_wX3y0ZMH-j6BGb4546pwBfC3JaI",
     name: "Rucha Butala",
     linkedin: "https://www.linkedin.com/in/rucha-butala-3b93b4185/",
     position: "Software Developer at Centiro",
@@ -224,6 +234,7 @@ export const testimonials = [
       "Tejas is the go-to developer with frontend related queries, He is very good with Angular and also always trying look for better ways to solve problems. He is also willing to learn more and explore different technologies in backend not confining himself to frontend and is ready to take different initiatives around the workplace which challenge him to do better. He is also maintiains collaborations between various teams.",
   },
   {
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGxoU9ro2ddhg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1698424892118?e=1743638400&v=beta&t=8Zoo06S_pWItkJBaWoMPOLKl51KsKiKlR1Uhpf79too",
     name: "Shweta Patil",
     linkedin: "https://www.linkedin.com/in/shweta-patil-16501113b/",
     position: "Backend Developer at Centiro",

@@ -1,5 +1,4 @@
 import React from "react";
-import { HiArrowRight } from "react-icons/hi";
 
 const FeaturesCard = ({ item: { title, des, icon, link } }) => {
   return (
@@ -18,13 +17,13 @@ const FeaturesCard = ({ item: { title, des, icon, link } }) => {
       </p>
 
       {/* Learn More Link */}
-      <a
+      {/* <a
         href={link}
         className="inline-flex items-center text-indigo-500 font-medium hover:text-indigo-700 transition-colors duration-300"
       >
         Learn More
         <HiArrowRight className="ml-2 text-lg" />
-      </a>
+      </a> */}
     </div>
   );
 };

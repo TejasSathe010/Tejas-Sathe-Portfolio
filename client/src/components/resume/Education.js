@@ -1,40 +1,58 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ResumeCard from "./ResumeCard";
-import { educationData } from "../../data/data";
-import { jobExperienceData } from "../../data/data";
+import { educationData, jobExperienceData } from "../../data/data";
+import { MdSchool, MdWork } from "react-icons/md";
 
 const Education = () => {
-  const renderSection = (data, title) => (
-    <div>
-      <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-        <p className="text-sm text-designColor tracking-[4px]">
-          {data[0].period}
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+  // Helper function for rendering sections
+  const renderSection = (data, title, icon) => (
+    <div className="shadow-lg p-8 rounded-2xl border border-gray-200 transition-all hover:shadow-2xl">
+      {/* Title with Icon */}
+      <div className="flex items-center gap-4 border-b border-gray-300 pb-4 mb-6">
+        <div className="text-indigo-600 text-4xl">{icon}</div>
+        <h2 className="text-2xl font-bold text-gray-900">{title}</h2>
       </div>
-      <div className="mt-6 lgl:mt-14 w-full h-[700px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+
+      {/* Resume Cards */}
+      <ul className="space-y-6">
         {data.map((item, index) => (
-          <ResumeCard
+          <li
             key={index}
-            title={item.title}
-            subTitle={item.subTitle}
-            result={item.result}
-            keySkills={item.keySkills}
-          />
+            className="flex flex-col gap-2 border-l-4 border-indigo-500 pl-5 relative group"
+          >
+            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-sm text-gray-700">{item.subTitle}</p>
+            {item.result && (
+              <span className="text-sm text-indigo-700 font-medium">
+                Result: {item.result}
+              </span>
+            )}
+            {item.keySkills && (
+              <p className="text-sm text-gray-500">
+                <span className="font-medium text-gray-700">Key Skills:</span>{" "}
+                {Array.isArray(item.keySkills)
+                  ? item.keySkills.join(", ")
+                  : item.keySkills}
+              </p>
+            )}
+            {/* Decorative Dot */}
+            <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-500 rounded-full group-hover:scale-125 transition-transform"></span>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 md:px-12 lg:px-20"
     >
-      {renderSection(educationData, "Education")}
-      {renderSection(jobExperienceData, "Job Experience")}
+      {renderSection(educationData, "Education", <MdSchool />)}
+      {renderSection(jobExperienceData, "Job Experience", <MdWork />)}
     </motion.div>
   );
 };

@@ -22,9 +22,39 @@
 }
 
 .active {
-    color: #020202b4;
+    color: #a855f7;
     font-weight: bold;
 }
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
 }
+
+/* In your CSS file (e.g., App.css or a dedicated style file) */
+.hanging-man-container {
+    position: fixed;
+    top: -200px; /* Initially above the screen */
+    right: 10%;
+    animation: hanging 5s ease-in-out forwards; /* Animation to move man down */
+    z-index: 1000;
+  }
+  
+  .hanging-man-svg {
+    width: 100px;
+    height: auto;
+  }
+  
+  @keyframes hanging {
+    0% {
+      top: -200px;
+    }
+    100% {
+      top: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hanging-man-container {
+      display: none; /* Hide on small screens */
+    }
+  }
+  

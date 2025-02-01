@@ -6,12 +6,9 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-8 md:px-16 lg:px-24 bg-gradient-to-br from-gray-50 via-white to-gray-100"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 px-8 md:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 py-12 md:py-24"
     >
-      {/* Left Section */}
       <LeftBanner />
-
-      {/* Right Section */}
       <RightBanner />
     </section>
   );

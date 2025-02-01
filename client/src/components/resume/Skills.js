@@ -1,166 +1,117 @@
-import React from 'react'
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaReact, FaAngular, FaNodeJs, FaJava, FaPython, FaDocker, FaAws, FaGithub } from 'react-icons/fa';
+import { SiKubernetes, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiNginx, SiJira, SiMysql, SiAmazondynamodb, SiTypescript, SiTensorflow, SiScikitlearn, SiNextdotjs, SiTailwindcss, SiSass, SiJest, SiWebpack, SiFigma, SiGitlab, SiMicrosoft, SiGooglecloud, SiRedis, SiElasticsearch } from 'react-icons/si';
 
 const Skills = () => {
+  const skills = [
+    {
+      category: "Languages",
+      items: [
+        { name: "C/C++", icon: <FaReact className="text-blue-600" /> },
+        { name: "HTML5/CSS", icon: <FaAngular className="text-red-600" /> },
+        { name: "JavaScript", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+        { name: "Java", icon: <FaJava className="text-orange-600" /> },
+        { name: "Python", icon: <FaPython className="text-yellow-500" /> },
+        { name: "Go (Golang)", icon: <FaReact className="text-blue-600" /> },
+        { name: "C#", icon: <SiMicrosoft className="text-green-600" /> },
+      ],
+    },
+    {
+      category: "Frameworks & Libraries",
+      items: [
+        { name: "React", icon: <FaReact className="text-blue-600" /> },
+        { name: "Angular", icon: <FaAngular className="text-red-600" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
+        { name: "Node.js", icon: <SiNodedotjs className="text-green-600" /> },
+        { name: "Express.js", icon: <SiExpress className="text-green-600" /> },
+        { name: "ASP.Net", icon: <SiMicrosoft className="text-blue-600" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" /> },
+        { name: "SASS/SCSS", icon: <SiSass className="text-pink-600" /> },
+        { name: "Jest", icon: <SiJest className="text-gray-800" /> },
+      ],
+    },
+    {
+      category: "Development Tools",
+      items: [
+        { name: "Git", icon: <FaGithub className="text-black" /> },
+        { name: "Docker", icon: <FaDocker className="text-blue-400" /> },
+        { name: "Kubernetes", icon: <SiKubernetes className="text-blue-500" /> },
+        { name: "CI/CD (GitLab)", icon: <SiGitlab className="text-orange-600" /> },
+        { name: "Nginx", icon: <SiNginx className="text-green-600" /> },
+        { name: "Webpack", icon: <SiWebpack className="text-pink-600" /> },
+        { name: "Figma", icon: <SiFigma className="text-blue-500" /> },
+        { name: "Jira", icon: <SiJira className="text-green-600" /> },
+      ],
+    },
+    {
+      category: "Databases",
+      items: [
+        { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+        { name: "PL/SQL", icon: <SiMysql className="text-blue-600" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
+        { name: "Redis", icon: <SiRedis className="text-red-600" /> },
+        { name: "ElasticSearch", icon: <SiElasticsearch className="text-yellow-600" /> },
+        { name: "DynamoDB", icon: <SiAmazondynamodb className="text-green-600" /> },
+      ],
+    },
+    {
+      category: "Cloud Platforms",
+      items: [
+        { name: "AWS", icon: <FaAws className="text-orange-500" /> },
+        { name: "Azure", icon: <SiMicrosoft className="text-blue-600" /> },
+        { name: "GCP", icon: <SiGooglecloud className="text-blue-500" /> },
+      ],
+    },
+    {
+      category: "Machine Learning",
+      items: [
+        { name: "Scikit-learn", icon: <SiScikitlearn className="text-yellow-500" /> },
+        { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
+      ],
+    },
+    {
+      category: "API Development",
+      items: [
+        { name: "RESTful APIs", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "WebSocket", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "gRPC", icon: <FaNodeJs className="text-green-600" /> },
+        { name: "GraphQL", icon: <FaNodeJs className="text-green-600" /> },
+      ],
+    },
+  ];
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 md:px-12 lg:px-20"
     >
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Frontend Skill</h2>
+      {skills.map((skillCategory, index) => (
+        <div
+          key={index}
+          className="bg-gradient-to-r from-white to-gray-100 shadow-lg p-8 rounded-2xl border border-gray-200 transition-all hover:shadow-2xl"
+        >
+          <div className="flex items-center gap-4 border-b border-gray-300 pb-4 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">{skillCategory.category}</h2>
+          </div>
+          <ul className="space-y-6">
+            {skillCategory.items.map((skill, idx) => (
+              <li key={idx} className="flex items-center gap-3 border-l-4 border-indigo-500 pl-5 relative group">
+                <div className="text-xl text-gray-600">{skill.icon}</div>
+                <p className="text-md font-medium text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  {skill.name}
+                </p>
+                <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-500 rounded-full group-hover:scale-125 transition-transform"></span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className='className="mt-14 w-full flex flex-col gap-6'>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">React.JS (JavaScript)</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[98%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">98%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Angular (TypeScript)</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[98%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">98%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Bootstrap</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">80%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Tailwind CSS</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[90%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">90%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">CSS</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">95%</span>
-              </motion.span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full lgl:w-1/2">
-        <div className="py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px] uppercase">
-            Features
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Backend Skill</h2>
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Node.JS (JavaScript)</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">90%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Flask (Python)</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[95%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">90%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">MongoDB</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[85%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">85%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">C++</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">80%</span>
-              </motion.span>
-            </span>
-          </div>
-          <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">ASP.Net (C#)</p>
-            <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
-              <motion.span
-                initial={{ x: "-100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[80%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
-              >
-                <span className="absolute -top-7 right-0">80%</span>
-              </motion.span>
-            </span>
-          </div>
-        </div>
-      </div>
+      ))}
     </motion.div>
   );
-}
+};
 
-export default Skills
+export default Skills;

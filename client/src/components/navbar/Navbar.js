@@ -13,13 +13,14 @@ const Navbar = () => {
     <div className="w-full h-20 sticky top-0 z-50 bg-white shadow-md border-b border-gray-200 flex justify-between items-center px-6 lg:px-16 font-sans backdrop-blur-lg">
       {/* Logo */}
       <div>
-        <a href="#">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a href="#home">
           <img
             src={profileLogo}
             alt="logo"
             width={48}
             height={48}
-            className="rounded-full shadow-sm hover:shadow-md hover:scale-105 transition-transform duration-300 border border-gray-300"
+            className="rounded-full border-4 border-indigo-600 shadow-sm hover:shadow-md hover:scale-105 transition-transform duration-300"
           />
         </a>
       </div>
@@ -48,18 +49,21 @@ const Navbar = () => {
 
         {/* Social Links */}
         <div className="flex items-center gap-4 ml-8">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
             href="#"
             className="text-xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
           >
             <FaGithub />
           </a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
             href="#"
             className="text-xl text-gray-600 hover:text-blue-400 transition-transform duration-300"
           >
             <FaTwitter />
           </a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
             href="#"
             className="text-xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
@@ -121,18 +125,21 @@ const Navbar = () => {
                 Connect with me:
               </h2>
               <div className="flex gap-6">
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a
                   href="#"
                   className="text-2xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"
                 >
                   <FaGithub />
                 </a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a
                   href="#"
                   className="text-2xl text-gray-600 hover:text-blue-400 transition-transform duration-300"
                 >
                   <FaTwitter />
                 </a>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a
                   href="#"
                   className="text-2xl text-gray-600 hover:text-indigo-500 transition-transform duration-300"

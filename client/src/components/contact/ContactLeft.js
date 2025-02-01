@@ -1,47 +1,58 @@
-import React from 'react';
+import React from "react";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import { contactImg } from "../../assets/index";
+import { profileLogo } from "../../assets/index";
+import Title from "../layouts/Title";
 
 const ContactLeft = () => {
   return (
-    <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-slate-50 to-slate-200 p-4 lgl:p-8 rounded-lg shadow-xl flex flex-col gap-8 justify-center">
+    <div className="w-full lg:w-[35%] bg-white shadow-lg rounded-xl border border-gray-200 p-8 text-center">
+      <Title title="Let's Connect" des="Contact Information" />
+
       <img
-        className="w-full h-64 object-cover rounded-lg mb-2"
-        src={contactImg}
-        alt="contactImg"
+        className="w-32 h-32 object-cover rounded-full border-4 border-indigo-600 mx-auto"
+        src={profileLogo}
+        alt="Profile"
       />
-      <div className="flex flex-col gap-4">
-        <h3 className="text-3xl font-bold text-designColor">Tejas Sathe</h3>
-        <p className="text-lg font-normal text-gray-800">
-          Full Stack Developer
+
+      <h3 className="text-2xl font-semibold text-gray-900 mt-4">Tejas Sathe</h3>
+      <p className="text-gray-600">Full Stack Developer</p>
+      <p className="text-sm text-gray-500 mt-2">
+        Graduate student at the University of South Florida, Tampa.
+      </p>
+
+      {/* Contact Info */}
+      <div className="mt-6 space-y-2">
+        <p className="text-gray-700">
+          📞 <span className="font-medium">+1 (786) 561-4652</span>
         </p>
-        <p className="text-base text-gray-800 tracking-wide">
-          Graduate student at the University of South Florida, Tampa.
-        </p>
-        <p className="text-base text-gray-800 flex items-center gap-2">
-          Phone: <span className="text-gray-600">+1 (786) 561-4652</span>
-        </p>
-        <p className="text-base text-gray-800 flex items-center gap-2">
-          Email:
-          <span className="text-gray-600">tejassathe117@gmail.com</span>
+        <p className="text-gray-700">
+          ✉️ <span className="font-medium">tejassathe010@gmail.com</span>
         </p>
       </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4 text-designColor">Find me in</h2>
-        <div className="flex gap-4">
-            <span className="bannerIcon">
-              <a href="https://www.linkedin.com/in/tejas-sathe010/"><FaLinkedinIn /></a>
-            </span>
-            <span className="bannerIcon">
-              <a href="https://github.com/TejasSathe010"><FaGithub /></a>
-            </span>
-            <span className="bannerIcon">
-              <a href="https://twitter.com/TejasSathe010"><FaTwitter /></a>
-            </span>
-        </div>
+
+      {/* Social Links */}
+      <div className="flex justify-center gap-4 mt-6">
+        <a
+          href="https://www.linkedin.com/in/tejas-sathe010/"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-blue-100 transition-all duration-300"
+        >
+          <FaLinkedinIn className="text-blue-600 text-xl" />
+        </a>
+        <a
+          href="https://github.com/TejasSathe010"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+        >
+          <FaGithub className="text-gray-700 text-xl" />
+        </a>
+        <a
+          href="https://twitter.com/TejasSathe010"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-blue-200 transition-all duration-300"
+        >
+          <FaTwitter className="text-blue-400 text-xl" />
+        </a>
       </div>
     </div>
   );
-}
+};
 
 export default ContactLeft;
