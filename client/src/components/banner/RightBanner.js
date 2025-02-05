@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import { TechLitHubProject, projectSix } from '../../assets/index';
+import { TechLitHubProject, projectNine, projectSix } from '../../assets/index';
 
 const RightBanner = () => {
   const projects = [
@@ -12,6 +12,13 @@ const RightBanner = () => {
       src: TechLitHubProject,
       gitLink: "https://github.com/TejasSathe010/TechLitHub",
       deployLink: "https://techlithub.netlify.app/",
+    },
+    {
+      title: 'CodeCardz | Flashcards',
+      description: 'A web application designed to help users practice and master Data Structures and Algorithms (DSA) problems through an interactive flashcard system',
+      src: projectNine,
+      gitLink: 'https://github.com/TejasSathe010/CodeCardz---DSA-Flashcards',
+      deployLink: 'https://codecardz.netlify.app/'
     },
     {
       title: "Machine Learning from Scratch",

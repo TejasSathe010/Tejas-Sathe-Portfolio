@@ -23,12 +23,12 @@ const Projects = () => {
   }, []);
 
   const showcaseProjects = projectData.filter((project) =>
-    ["TechLitHub.com", "Machine Learning from Scratch"].includes(project.title)
+    ["TechLitHub.com", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
   );
 
   const archiveProjects = projectData.filter(
     (project) =>
-      !["TechLitHub.com", "Machine Learning from Scratch"].includes(project.title)
+      !["TechLitHub.com", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
   );
 
   return (

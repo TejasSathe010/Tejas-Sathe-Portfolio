@@ -11,55 +11,22 @@ import Testimonial from "./components/tesimonial/Testimonial";
 
 function App() {
   const penguinRef = useRef(null);
+  const friendPenguinRef = useRef(null);
   const leftLegRef = useRef(null);
   const rightLegRef = useRef(null);
   const leftArmRef = useRef(null);
   const rightArmRef = useRef(null);
+  const friendLeftLegRef = useRef(null);
+  const friendRightLegRef = useRef(null);
+  const friendLeftArmRef = useRef(null);
+  const friendRightArmRef = useRef(null);
   const thoughtCloudRef = useRef(null);
   const lastMousePos = useRef({ x: 0, y: 0 });
   const [walking, setWalking] = useState(false);
   const walkingAnimationsRef = useRef(null);
+  const friendWalkingAnimationsRef = useRef(null);
 
-  // Initialize walking animations
-  useEffect(() => {
-    walkingAnimationsRef.current = {
-      leftLeg: gsap.to(leftLegRef.current, {
-        duration: 0.5,
-        y: 10,
-        rotation: 15,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        paused: true
-      }),
-      rightLeg: gsap.to(rightLegRef.current, {
-        duration: 0.5,
-        y: 10,
-        rotation: -15,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        paused: true
-      }),
-      leftArm: gsap.to(leftArmRef.current, {
-        duration: 0.5,
-        rotation: -20,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        paused: true
-      }),
-      rightArm: gsap.to(rightArmRef.current, {
-        duration: 0.5,
-        rotation: 20,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        paused: true
-      })
-    };
-  }, []);
-
+  // Initialize walking animations for both penguins
   useEffect(() => {
     walkingAnimationsRef.current = {
       leftLeg: gsap.to(leftLegRef.current, {
@@ -98,8 +65,46 @@ function App() {
       })
     };
 
-    // Initially hide the thought cloud
+    friendWalkingAnimationsRef.current = {
+      leftLeg: gsap.to(friendLeftLegRef.current, {
+        duration: 0.5,
+        y: 10,
+        rotation: 15,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        paused: true
+      }),
+      rightLeg: gsap.to(friendRightLegRef.current, {
+        duration: 0.5,
+        y: 10,
+        rotation: -15,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        paused: true
+      }),
+      leftArm: gsap.to(friendLeftArmRef.current, {
+        duration: 0.5,
+        rotation: -20,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        paused: true
+      }),
+      rightArm: gsap.to(friendRightArmRef.current, {
+        duration: 0.5,
+        rotation: 20,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        paused: true
+      })
+    };
+
+    // Initially hide the thought cloud and friend penguin
     gsap.set(thoughtCloudRef.current, { opacity: 0, scale: 0 });
+    gsap.set(friendPenguinRef.current, { opacity: 0, scale: 0, x: -window.innerWidth });
   }, []);
 
   useEffect(() => {
@@ -113,7 +118,7 @@ function App() {
       const x = mouseX - 30;
       const y = mouseY - 30 + window.scrollY;
 
-      // Move penguin
+      // Move main penguin
       gsap.to(penguinRef.current, {
         duration: 0.3,
         x: x,
@@ -125,6 +130,14 @@ function App() {
         duration: 0.3,
         x: x - 45,
         y: y - 90,
+      });
+
+      // Hide friend penguin while moving
+      gsap.to(friendPenguinRef.current, {
+        duration: 0.2,
+        opacity: 0,
+        scale: 0,
+        x: -window.innerWidth,
       });
 
       if (!walking) {
@@ -145,12 +158,42 @@ function App() {
         setWalking(false);
         Object.values(walkingAnimationsRef.current).forEach(anim => anim.pause());
         
+        // Show thought cloud
         gsap.to(thoughtCloudRef.current, {
           opacity: 1,
           scale: 1,
           duration: 0.6,
           ease: "elastic.out(1, 0.5)"
         });
+
+        // Animate friend penguin dramatically entering and hugging
+        gsap.timeline()
+          .to(friendPenguinRef.current, {
+            duration: 0.8,
+            opacity: 1,
+            scale: 1,
+            x: x + 30, // Slightly to the right of main penguin
+            y: y,
+            ease: "power2.out",
+            onStart: () => {
+              Object.values(friendWalkingAnimationsRef.current).forEach(anim => anim.play());
+            }
+          })
+          .to(friendPenguinRef.current, {
+            duration: 0.3,
+            rotation: -10,
+            x: x + 10, // Move very close to main penguin
+            onComplete: () => {
+              Object.values(friendWalkingAnimationsRef.current).forEach(anim => anim.pause());
+              
+              // Hug animation
+              gsap.to([friendLeftArmRef.current, leftArmRef.current], {
+                rotation: -40,
+                duration: 0.3,
+                ease: "power1.inOut"
+              });
+            }
+          });
       }, 1000);
     };
 
@@ -162,6 +205,10 @@ function App() {
       gsap.set(thoughtCloudRef.current, { 
         x: x - 45,
         y: y - 90
+      });
+      gsap.set(friendPenguinRef.current, {
+        x: x + 30,
+        y: y
       });
     };
 
@@ -245,6 +292,42 @@ function App() {
           </text>
         </svg>
       </div>
+
+      <svg
+        ref={friendPenguinRef}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        className="absolute pointer-events-none z-40"
+        width="60"
+        height="60"
+      >
+        <g fill="#9c27b0">
+          <ellipse cx="50" cy="60" rx="20" ry="25" />
+        </g>
+        <g fill="white">
+          <ellipse cx="50" cy="70" rx="15" ry="20" />
+        </g>
+        <circle cx="50" cy="30" r="10" fill="#9c27b0" />
+        <circle cx="45" cy="27" r="3" fill="white" />
+        <circle cx="55" cy="27" r="3" fill="white" />
+        <circle cx="45" cy="27" r="1.5" fill="black" />
+        <circle cx="55" cy="27" r="1.5" fill="black" />
+        <polygon points="50,33 55,37 45,37" fill="orange" />
+        <g fill="#9c27b0">
+          <ellipse cx="35" cy="50" rx="6" ry="9" />
+          <ellipse cx="65" cy="50" rx="6" ry="9" />
+        </g>
+        <g ref={friendLeftArmRef} fill="#9c27b0">
+          <ellipse cx="30" cy="55" rx="6" ry="8" />
+        </g>
+        <g ref={friendRightArmRef} fill="#9c27b0">
+          <ellipse cx="70" cy="55" rx="6" ry="8" />
+        </g>
+        <g fill="orange">
+          <ellipse ref={friendLeftLegRef} cx="38" cy="85" rx="4" ry="2" />
+          <ellipse ref={friendRightLegRef} cx="62" cy="85" rx="4" ry="2" />
+        </g>
+      </svg>
 
       {/* Penguin SVG */}
       <svg

@@ -11,6 +11,7 @@ import {
   projectSix,
   projectSeven,
   projectEight,
+  projectNine,
 } from '../assets/index';
 
 // Features Data
@@ -80,6 +81,13 @@ export const projectData = [
     src: TechLitHubProject,
     gitLink: 'https://github.com/TejasSathe010/TechLitHub',
     deployLink: 'https://techlithub.netlify.app/'
+  },
+  {
+    title: 'CodeCardz | Flashcards',
+    description: 'A web application designed to help users practice and master Data Structures and Algorithms (DSA) problems through an interactive flashcard system',
+    src: projectNine,
+    gitLink: 'https://github.com/TejasSathe010/CodeCardz---DSA-Flashcards',
+    deployLink: 'https://codecardz.netlify.app/'
   },
   {
     title: 'Starbucks UI Clone',
