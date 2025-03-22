@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="w-full py-24 bg-gradient-to-b from-gray-50 to-gray-100"
+      className="w-full py-24"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* Title Section */}

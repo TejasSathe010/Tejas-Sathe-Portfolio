@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { motion } from 'framer-motion';
 import Banner from "./components/banner/Banner";
 import Contact from "./components/contact/Contact";
 import Features from "./components/features/Features";
@@ -367,59 +368,58 @@ function App() {
         </g>
       </svg>
       
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen bg-gray-50 text-gray-900 antialiased"
+    >
       {/* Navbar */}
-      <Navbar />
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <Navbar />
+      </header>
 
       {/* Main Content */}
-      <main className="max-w-screen-2xl mx-auto px-6 sm:px-4 md:px-16 py-8 sm:space-y-16 space-y-32">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 space-y-24 md:space-y-32">
         {/* Banner Section */}
-        <section className="rounded-3xl p-10 sm:p-0 md:p-4 text-white shadow-lg flex flex-col items-center text-center">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
           <Banner />
         </section>
 
         {/* Features Section */}
-        <section className="bg-gray-100 p-8 sm:p-0 md:p-4 rounded-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto">
-            <Features />
-          </div>
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+          <Features />
         </section>
 
         {/* Projects Section */}
-        <section className="bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 text-white p-10 sm:p-0 md:p-4 rounded-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto">
-            <Projects />
-          </div>
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+          <Projects />
         </section>
 
         {/* Resume Section */}
-        <section className="bg-white p-8 sm:p-0 md:p-4 rounded-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto">
-            <Resume />
-          </div>
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+          <Resume />
         </section>
 
         {/* Testimonial Section */}
-        <section className="bg-gradient-to-l from-blue-400 via-indigo-500 to-purple-500 text-white p-10 sm:p-0 md:p-4 rounded-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto">
-            <Testimonial />
-          </div>
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+          <Testimonial />
         </section>
 
         {/* Contact Section */}
-        <section className="bg-gray-100 p-8 sm:p-0 md:p-4 rounded-3xl shadow-lg">
-          <div className="max-w-7xl mx-auto">
-            <Contact />
-          </div>
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12">
+          <Contact />
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white text-gray-500 py-6 sm:py-8 md:py-8">
-        <div className="max-w-7xl mx-auto">
-          {/* <Footer /> */}
+      <footer className="bg-white shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8">
           <FooterBottom />
         </div>
       </footer>
+    </motion.div>
     </div>
   );
 }

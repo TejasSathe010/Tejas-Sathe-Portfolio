@@ -1,9 +1,18 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FaReact, FaAngular, FaNodeJs, FaJava, FaPython, FaDocker, FaAws, FaGithub } from 'react-icons/fa';
 import { SiKubernetes, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiNginx, SiJira, SiMysql, SiAmazondynamodb, SiTypescript, SiTensorflow, SiScikitlearn, SiNextdotjs, SiTailwindcss, SiSass, SiJest, SiWebpack, SiFigma, SiGitlab, SiMicrosoft, SiGooglecloud, SiRedis, SiElasticsearch } from 'react-icons/si';
 
 const Skills = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0.3, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.3], [50, 0]);
+
   const skills = [
     {
       category: "Languages",
@@ -85,30 +94,75 @@ const Skills = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 md:px-12 lg:px-20"
+      ref={containerRef}
+      style={{ opacity, y }}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 md:px-12 lg:px-20 min-h-screen py-20"
     >
       {skills.map((skillCategory, index) => (
-        <div
+        <motion.div
           key={index}
-          className="bg-gradient-to-r from-white to-gray-100 shadow-lg p-8 rounded-2xl border border-gray-200 transition-all hover:shadow-2xl"
+          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-white to-gray-100 shadow-lg p-8 rounded-2xl border border-gray-200 transition-all hover:shadow-2xl transform-gpu hover:rotate-1 hover:-translate-y-1"
         >
-          <div className="flex items-center gap-4 border-b border-gray-300 pb-4 mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">{skillCategory.category}</h2>
-          </div>
-          <ul className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex items-center gap-4 border-b border-gray-300 pb-4 mb-6"
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-2xl font-bold text-gray-900"
+            >
+              {skillCategory.category}
+            </motion.h2>
+          </motion.div>
+
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="space-y-6"
+          >
             {skillCategory.items.map((skill, idx) => (
-              <li key={idx} className="flex items-center gap-3 border-l-4 border-indigo-500 pl-5 relative group">
-                <div className="text-xl text-gray-600">{skill.icon}</div>
-                <p className="text-md font-medium text-gray-900 group-hover:text-indigo-600 transition-colors">
+              <motion.li
+                key={idx}
+                initial={{ opacity: 0, y: 20, x: -20 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.3 + idx * 0.1,
+                  ease: "easeOut"
+                }}
+                className="flex items-center gap-3 border-l-4 border-indigo-500 pl-5 relative group hover:bg-gray-50 transition-all"
+                whileHover={{ scale: 1.02 }}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="text-xl text-gray-600"
+                >
+                  {skill.icon}
+                </motion.div>
+                <motion.p
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-md font-medium text-gray-900 group-hover:text-indigo-600 transition-colors"
+                >
                   {skill.name}
-                </p>
-                <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-500 rounded-full group-hover:scale-125 transition-transform"></span>
-              </li>
+                </motion.p>
+                <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-500 rounded-full group-hover:scale-125 transition-transform" />
+              </motion.li>
             ))}
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       ))}
     </motion.div>
   );

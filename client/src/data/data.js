@@ -166,46 +166,49 @@ export const educationData = [
 
 export const jobExperienceData = [
   {
-    period: '2024 - 2025',
+    period: '2024 - 2024',
     title: 'Software Developer Intern',
-    subTitle: 'FirstFive8, Inc. - Jambonz - (2022 - 2023)',
-    keySkills: 'Javascript | React (TypeScript) | Next.JS | Node.js | Express Framework | CSS | ChakraUI | Docker | K8',
-  },
-  {
-    period: '2020 - 2023',
-    title: 'Full Stack Engineer',
-    subTitle: 'Centiro Solutions - (2022 - 2023)',
-    result: 'India',
-    keySkills: 'Javascript | Angular (TypeScript) | Next.JS | ASP.Net Framework | CSS | Figma | Azure DevOps',
+    subTitle: 'FirstFive8, Inc. – Jambonz | Boston, MA, USA',
+    keySkills: 'Node.js | TypeScript | Docker | Kubernetes | React.js | SIP | WebRTC | WebSocket',
     description: [
-      "•  Led the transformation of a multi-page website for 20+ enterprise clients using cutting-edge technologies including Angular (TypeScript), RxJS, and NgRx. Employed advanced SEO strategies to achieve a 50% reduction in page load times, enhancing user experience and engagement. Ensured seamless alignment with Figma designs and implemented scalable architectural patterns.",
-      "• Architected and optimized a suite of 10+ ASP .Net core endpoints with a remarkable 99.9% uptime and 25% improvement in response times. Implemented MySQL query optimization techniques to enhance database performance, resulting in faster data retrieval and processing. Leveraged React for the Application Management project, achieving streamlined development workflows, and deployed via Octopus for efficient CI/CD integration.",
-      "• Tech Stack: JS, TS, Angular, React, C#, ASP.Net Core, Microsoft SQL Server, Octopus, Microsoft Azure"
-    ] 
-  },
-  {
-    period: '2020 - 2023',
-    title: 'Software Developer',
-    subTitle: 'Cognizant - (2020 - 2022)',
-    result: 'India',
-    keySkills: 'Python | LINUX | UNIX | Moogsoft | Web API | Continues Improvement | Maintenance',
-    description: [
-      "• Drove the development of sophisticated Python automation scripts tailored for comprehensive monitoring of Hadoop infrastructure, seamlessly integrating with critical services such as Hive, Spark, and PostgreSQL. Achieved a remarkable 60% reduction in manual efforts, optimizing operational efficiency and system reliability.",
-      "• Engineered enhancements with advanced error handling mechanisms, significantly reducing system downtime by 40% and ensuring uninterrupted operations at scale. Elevated system performance to industry-leading standards.",
-      "• Tech Stack: Python, LINUX, Git, Hadoop Clusters, Grafana, Moogsoft AIOps"
+      "Engineered a high-throughput microservices architecture using Node.js, TypeScript, Docker, and Kubernetes, optimizing resource allocation and increasing system efficiency across 8+ enterprise-scale conversational AI platforms, processing over 500K requests/day.",
+      "Designed and deployed a low-latency real-time transcription and translation pipeline leveraging SIP, WebRTC, and WebSocket, reducing processing delays from 400ms to 200ms and enabling seamless multilingual communication for 10K+ concurrent users.",
+      "Enhanced frontend architecture with React.js and modern state management techniques, modularizing components and improving user engagement by 40%, while ensuring seamless integration with backend microservices.",
+      "Automated deployment pipelines using Kubernetes, Docker, and PM2, reducing production incidents from 50/month to 35/month and ensuring 99.99% uptime across 3 global data centers."
     ]
   },
   {
-    period: '2020 - 2023',
+    period: 'Mar 2022 – Jul 2023',
+    title: 'Software Developer',
+    subTitle: 'Centiro Solutions | Pune, India',
+    keySkills: 'Angular | TypeScript | ASP.NET | Azure DevOps | Octopus Deploy',
+    description: [
+      "Spearheaded the re-architecture of a high-scale enterprise logistics platform using Angular, TypeScript, and ASP.NET, reducing page load times by 70% and increasing user engagement by 50% through advanced caching strategies and API optimizations.",
+      "Refactored high-performance RESTful APIs with ASP.NET and optimized database queries, reducing response times from 900ms to 500ms and improving system scalability to handle over 15,000 concurrent users.",
+      "Streamlined CI/CD workflows with Azure DevOps (Repos, Pipelines) and Octopus Deploy, cutting deployment time by 60% and reducing defects by nearly 1/3rd, accelerating release cycles for a globally distributed development team."
+    ]
+  },
+  {
+    period: 'Dec 2020 – Mar 2022',
+    title: 'Software Engineer',
+    subTitle: 'Cognizant | Pune, India',
+    keySkills: 'Python | Hadoop | Grafana | Moogsoft | AI/ML',
+    description: [
+      "Overhauled an automated and scalable Hadoop monitoring system in Python, automating issue detection and resolution, reducing manual intervention from 20+ hours per week to under 5 hours, and improving incident response time by 3x.",
+      "Developed an AI-powered proactive alerting pipeline by integrating Python with Grafana and Moogsoft, decreasing false positive alerts from 1000s per day to a manageable threshold, significantly enhancing operational stability.",
+      "Optimized Hadoop job scheduling, increasing cluster utilization by 1.5x through intelligent resource allocation while deploying self-healing mechanisms, preventing critical failures and reducing unscheduled downtimes."
+    ]
+  },
+  {
+    period: '2019',
     title: 'Android Developer Intern',
-    subTitle: 'WERP - (2019)',
-    result: 'India',
+    subTitle: 'WERP | India',
     keySkills: 'Android Development | API Integration | Adobe XD | Prototype Design',
     description: [
-      "• Contributed to the entire product development lifecycle, including planning, design, prototyping, testing, and iterating, of an Android application developed for women to buy and sell goods online.",
-      " • Used Adobe XD for designing and developing user interactive prototypes. Integrated 3rd party APIs, enhancing application functionality."
+      "Contributed to the entire product development lifecycle, including planning, design, prototyping, testing, and iterating, of an Android application developed for women to buy and sell goods online.",
+      "Used Adobe XD for designing and developing user interactive prototypes. Integrated 3rd party APIs, enhancing application functionality."
     ]
-  },
+  }
 ];
 
 export const testimonials = [
