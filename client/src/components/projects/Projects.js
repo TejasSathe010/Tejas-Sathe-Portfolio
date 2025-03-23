@@ -34,12 +34,12 @@ const Projects = () => {
   }, []);
 
   const showcaseProjects = projectData.filter((project) =>
-    ["TechLitHub.com", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
+    ["TechLitHub.com", "Redix - A modern twist on Redis in Go", "SmartProxy", "NN-Grad Library", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
   );
 
   const archiveProjects = projectData.filter(
     (project) =>
-      !["TechLitHub.com", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
+      !["TechLitHub.com", "Redix - A modern twist on Redis in Go", "SmartProxy", "NN-Grad Library", "Machine Learning from Scratch", "CodeCardz | Flashcards"].includes(project.title)
   );
 
   return (

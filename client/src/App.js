@@ -383,32 +383,32 @@ function App() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 space-y-24 md:space-y-32">
         {/* Banner Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12 mb-8">
           <Banner />
         </section>
 
         {/* Features Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12 mb-8">
           <Features />
         </section>
 
         {/* Projects Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12 mb-8">
           <Projects />
         </section>
 
         {/* Resume Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12 mb-8">
           <Resume />
         </section>
 
         {/* Testimonial Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12 mb-8">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12 mb-8">
           <Testimonial />
         </section>
 
         {/* Contact Section */}
-        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-8 sm:p-12">
+        <section className="relative z-10 bg-white rounded-2xl shadow-lg p-2 md:p-12">
           <Contact />
         </section>
       </main>

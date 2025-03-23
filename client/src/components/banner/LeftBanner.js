@@ -23,13 +23,13 @@ const LeftBanner = () => {
       initial={{ opacity: 0, y: 20, x: -50 }}
       animate={{ opacity: 1, y: 0, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col items-start gap-8"
+      className="flex flex-col items-start gap-6"
     >
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="text-lg font-medium text-gray-500 tracking-wide"
+        className="text-base md:text-lg font-medium text-gray-500 tracking-wide"
       >
         Hey there 👋
       </motion.h4>
@@ -38,7 +38,7 @@ const LeftBanner = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight"
+        className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight"
       >
         I’m
         <span className="ml-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">
@@ -50,7 +50,7 @@ const LeftBanner = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-        className="text-2xl md:text-3xl font-semibold text-gray-700"
+        className="text-xl md:text-2xl font-semibold text-gray-700"
       >
         A <span className="text-purple-500 font-bold">{text}</span>
         <Cursor cursorStyle="|" cursorColor="#00bcd4" />
@@ -60,7 +60,7 @@ const LeftBanner = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-        className="text-base md:text-lg text-gray-600 leading-8 max-w-xl"
+        className="text-sm md:text-base text-gray-600 leading-6 max-w-md"
       >
         Passionate about crafting intuitive and scalable web applications with
         sleek UI design and robust backend solutions.
@@ -70,27 +70,27 @@ const LeftBanner = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
-        className="flex items-center gap-6 mt-8"
+        className="flex items-center gap-4 mt-6"
       >
         <motion.a
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           href="#contact"
-          className="px-6 py-3.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-lg shadow-lg transition-all"
+          className="px-4 md:px-6 py-2.5 md:py-3.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-lg shadow-md transition-all"
         >
           Contact Me
         </motion.a>
         <motion.a
-          whileHover={{ x: 5, transition: { duration: 0.2 } }}
+          whileHover={{ x: 3, transition: { duration: 0.2 } }}
           whileTap={{ scale: 0.95 }}
           href="#projects"
-          className="text-indigo-600 font-medium flex items-center gap-2 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="text-indigo-600 font-medium flex items-center gap-1.5 md:gap-2 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >
-          View My Work <FiArrowRight className="text-lg transition-transform group-hover:translate-x-1" />
+          View My Work <FiArrowRight className="text-sm md:text-lg transition-transform group-hover:translate-x-1" />
         </motion.a>
       </motion.div>
 
-      <Media className="mt-8" />
+      <Media className="mt-6" />
     </motion.div>
   );
 };

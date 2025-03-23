@@ -12,64 +12,58 @@ import {
   projectSeven,
   projectEight,
   projectNine,
+  radix,
+  SmartProxyImage,
+  NNGradLibraryImage,
 } from '../assets/index';
 
-// Features Data
 export const featuresData = [
   {
     id: 1,
-    title: "Frontend Development",
-    des: "Proficient in modern frontend technologies including React.js, Angular, Next.js, and Tailwind CSS, with a focus on performance optimization and state management.",
-    link: "https://github.com/TejasSathe010/IT-Employees-System",
+    title: "Full-Stack Development",
+    des: "Expertise in modern frontend technologies like React.js, Next.js, Angular, and Tailwind CSS, along with backend development using Node.js, Express.js, ASP.Net, and microservices architecture.",
     icon: <FaLaptopCode />
   },
   {
     id: 2,
-    title: "Backend Development",
-    des: "Experienced with building scalable backend services using Node.js, Express.js, ASP.Net, and microservices architectures for high-performance applications.",
-    link: "https://github.com/TejasSathe010/Responsive-Nike-Website-Clone",
-    icon: <FaServer />
-  },
-  {
-    id: 3,
-    title: "Cloud Platforms",
-    des: "Hands-on experience with AWS (EC2, Lambda, S3, ECS), Azure (App Services, Functions), and GCP (Cloud Run, BigQuery) for cloud-native application deployment and management.",
-    link: "#",
+    title: "Cloud & DevOps",
+    des: "Hands-on experience with AWS (EC2, Lambda, S3, ECS), Azure (App Services, Functions), and GCP (Cloud Run, BigQuery). Skilled in Docker, Kubernetes, and CI/CD pipelines for scalable deployment.",
     icon: <FaCloud />
   },
   {
-    id: 4,
-    title: "Databases & Caching",
-    des: "Proficient in relational (MySQL, PostgreSQL) and NoSQL (MongoDB, Redis) databases, with expertise in designing optimized, scalable database architectures.",
-    link: "https://github.com/TejasSathe010/Starbucks-Landing-Page-CSS-Clone",
+    id: 3,
+    title: "Database & Caching",
+    des: "Proficient in relational (MySQL, PostgreSQL, PL/SQL) and NoSQL (MongoDB, Redis, DynamoDB, ElasticSearch) databases, with expertise in high-performance data storage and caching strategies.",
     icon: <FaDatabase />
   },
   {
+    id: 4,
+    title: "API Development & Integration",
+    des: "Experienced in building and optimizing RESTful APIs, WebSockets, gRPC, and GraphQL services for efficient communication in distributed systems.",
+    icon: <FaPlug />
+  },
+  {
     id: 5,
-    title: "Version Control & CI/CD",
-    des: "Skilled in Git for version control, and proficient in building CI/CD pipelines using Docker, Kubernetes, and GitLab, ensuring smooth deployment workflows.",
-    link: "#",
-    icon: <FaGit />
+    title: "Performance Monitoring & Optimization",
+    des: "Skilled in application performance monitoring (APM) with tools like Grafana, PM2, and Nginx, ensuring efficient and scalable software solutions.",
+    icon: <FaServer />
   },
   {
     id: 6,
     title: "Machine Learning & AI",
-    des: "Experienced in developing machine learning models using TensorFlow and Scikit-learn, including recommendation systems and deep learning architectures.",
-    link: "https://github.com/TejasSathe010",
+    des: "Experienced in ML, deep learning, and Gen AI with TensorFlow, PyTorch, Scikit-learn, and Langchain. Worked on training visualizations, transformer models, and complex dataset analysis, including LLM fine-tuning and deployment.",
     icon: <SiTensorflow />
   },
   {
     id: 7,
-    title: "API Development & Integration",
-    des: "Proficient in developing RESTful APIs, WebSockets, gRPC, and GraphQL services to enable efficient communication in distributed systems.",
-    link: "#",
-    icon: <FaPlug />
+    title: "Version Control & Software Engineering",
+    des: "Proficient in Git, GitHub, and GitLab for version control. Strong background in software architecture, scalability, and distributed systems development.",
+    icon: <FaGit />
   },
   {
     id: 8,
-    title: "UX/UI Design",
-    des: "Solid foundation in UX/UI design principles using tools like Figma, focusing on user-centered design and creating visually appealing, responsive interfaces.",
-    link: "#",
+    title: "UX/UI & Documentation",
+    des: "Experienced in UX/UI design principles using Figma, and developing documentation websites for projects like SmartProxy, with a design approach inspired by ElasticSearch.",
     icon: <FaPaintBrush />
   },
 ];
@@ -81,6 +75,27 @@ export const projectData = [
     src: TechLitHubProject,
     gitLink: 'https://github.com/TejasSathe010/TechLitHub',
     deployLink: 'https://techlithub.netlify.app/'
+  },
+  {
+    title: 'Redix - A modern twist on Redis in Go',
+    description: 'A high-performance, Redis-compatible in-memory database implemented in Go (Golang) with support for advanced data structures, persistence, replication, and clustering.',
+    src: radix,
+    gitLink: 'https://github.com/TejasSathe010/Redix-A-modern-twist-on-Redis',
+    deployLink: ''
+  },
+  {
+    title: 'SmartProxy',
+    description: 'A lightweight reverse proxy server built in Node.js, inspired by Nginx, designed for use in any Node.js project. It provides load balancing strategies, support for worker processes, upstream health checks, and more.',
+    src: SmartProxyImage,
+    gitLink: 'https://github.com/TejasSathe010/SmartProxy',
+    deployLink: 'https://smartproxy.netlify.app/'
+  },
+  {
+    title: 'NN-Grad Library',
+    description: 'A Neural Network Training and Visualization Library for JavaScript/React. It provides a simple API to create, train, and visualize neural networks in a React environment. With easy-to-use classes such as MLP (Multi-Layer Perceptron) and Value, this library enables rapid experimentation with machine learning models in JavaScript.',
+    src: NNGradLibraryImage,
+    gitLink: 'https://github.com/TejasSathe010/NN-Grad-Library',
+    deployLink: ''
   },
   {
     title: 'CodeCardz | Flashcards',

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import LeftBanner from "./LeftBanner";
 import RightBanner from "./RightBanner";
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -18,7 +18,7 @@ const Banner = () => {
     <section
       ref={ref}
       id="home"
-      className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-24 px-12 md:px-24 py-20 md:py-28 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-24 px-6 md:px-24 py-10 md:py-20 overflow-hidden"
     >
       <motion.div
         style={{ opacity, y, scale }}
@@ -33,11 +33,11 @@ const Banner = () => {
         />
       </motion.div>
 
-      <div className="z-10 w-full md:w-1/2 flex flex-col items-start gap-16 text-left max-w-3xl">
+      <div className="z-10 w-full md:w-1/2 flex flex-col items-start gap-8 text-left max-w-xl md:max-w-3xl">
         <LeftBanner />
       </div>
 
-      <div className="z-10 w-full md:w-1/2 flex justify-center items-center relative max-w-3xl">
+      <div className="z-10 w-full md:w-1/2 flex justify-center items-center relative max-w-xl md:max-w-3xl mt-12 md:mt-0">
         <RightBanner />
       </div>
     </section>

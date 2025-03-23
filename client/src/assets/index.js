@@ -15,6 +15,9 @@ import testimonialTwo from "./images/testmonial/testimonialTwo.png";
 import centiro from "./images/testmonial/centiro.png";
 import quote from "./images/testmonial/quote.png";
 import contactImg from "./images/contact/contactImg.png";
+import radix from "./images/projects/radix.jpeg"
+import SmartProxyImage from "./images/projects/SmartProxyImage.jpeg"
+import NNGradLibraryImage from "./images/projects/NNGradLibraryImage.jpeg"
 
 export {
   profileLogo,
@@ -34,4 +37,7 @@ export {
   centiro,
   quote,
   contactImg,
+  radix,
+  SmartProxyImage,
+  NNGradLibraryImage
 };
